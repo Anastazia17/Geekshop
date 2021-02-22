@@ -18,10 +18,13 @@ from django.urls import path
 
 from mainapp.views import index
 from mainapp.views import products
-
+from mainapp.views import contact
+from mainapp.views import test_context
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('products/', products),
+    path('contact/', contact),
+    path('test_context/', test_context),
 ]
