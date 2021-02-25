@@ -25,3 +25,4 @@ urlpatterns = [
     path('contact/', contact),
     path('test_context/', test_context),
 ]
+
