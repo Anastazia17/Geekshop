@@ -1,4 +1,8 @@
 from django.shortcuts import render
+import os
+import json
+
+dir = os.path.dirname(__file__)
 
 # Create your views here.
 def index(request):
@@ -28,4 +32,6 @@ def test_context(request):
             {'name': 'Настольная лампа 2', 'price': '1500.99'},
         ],
     }
+    file_path = os.path.join(dir, 'fixtures/products.json')
+    context.update(json.load(open(file_path, encoding='utf-8')))
     return render(request, 'mainapp/test_context.html', context)
