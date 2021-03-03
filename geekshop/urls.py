@@ -18,13 +18,14 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mainapp.views import index, products, contact
+from mainapp.views import index, products, contact, test_context
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('products/', products),
-    path('contact/', contact),
+    path('', name = 'index'),
+    path('products/', name = 'products'),
+    path('contact/', name = 'contact'),
+    path('test_context/', name = 'test_context'),
 ]
 
 if settings.DEBUG:
