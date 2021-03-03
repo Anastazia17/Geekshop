@@ -10,7 +10,7 @@ dir = os.path.dirname(__file__)
 def index(request):
     context = {'title':'GeekShop',
                'products': Product.objects.all(),
-               'categories':ProductCategory.objects.all()}
+               'categories': ProductCategory.objects.all()}
     return render(request, 'mainapp/index.html', context)
 
 def products(request):
