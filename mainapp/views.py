@@ -13,7 +13,7 @@ def index(request):
                'categories': ProductCategory.objects.all()}
     return render(request, 'mainapp/index.html', context)
 
-def products(request):
+def products(request, id=None):
     context = {'title': 'GeekShop - Каталог'}
     return render(request, 'mainapp/products.html', context)
 
