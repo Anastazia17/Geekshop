@@ -6,7 +6,6 @@ from mainapp.models import Product, ProductCategory
 
 dir = os.path.dirname(__file__)
 
-# Create your views here.
 def index(request):
     context = {'title':'GeekShop',
                'products': Product.objects.all(),
