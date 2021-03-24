@@ -5,7 +5,6 @@ from django.contrib.auth.decorators import login_required
 from mainapp.models import Product
 from basketapp.models import Basket
 
-
 @login_required
 def basket_add(request, product_id=None):
     product = Product.objects.get(id=product_id)
